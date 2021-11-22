@@ -1,0 +1,68 @@
+[
+    {
+        "alias" : "blueknight008",
+        "color" : "444444",
+        "lastTimestamp" : "10-11-2021",
+        "leaseFeeBaseMsat" : "0msat",
+        "leaseFeeBasis" : 0,
+        "fundingWeight" : 666,
+        "channelFeeMaxBaseMsat" : "100000msat",
+        "channelFeeMaxProportional" : 2,
+        "compactLease" : "029a000000200000000186a0"
+    },
+    {
+        "alias" : "TaledegaMorning",
+        "color" : "1ecbe1",
+        "lastTimestamp" : "10-11-2021",
+        "leaseFeeBaseMsat" : "0msat",
+        "leaseFeeBasis" : 0,
+        "fundingWeight" : 666,
+        "channelFeeMaxBaseMsat" : "100000msat",
+        "channelFeeMaxProportional" : 2,
+        "compactLease" : "029a000000200000000186a5"
+    },
+    {
+        "alias" : "samsonMM",
+        "color" : "a4865b",
+        "lastTimestamp" : "10-11-2021",
+        "leaseFeeBaseMsat" : "0msat",
+        "leaseFeeBasis" : 0,
+        "fundingWeight" : 666,
+        "channelFeeMaxBaseMsat" : "100000msat",
+        "channelFeeMaxProportional" : 2,
+        "compactLease" : "029a000000200000000186a4"
+    },
+    {
+        "alias" : "TerribleTwoss",
+        "color" : "1ee13c",
+        "lastTimestamp" : "10-11-2021",
+        "leaseFeeBaseMsat" : "0msat",
+        "leaseFeeBasis" : 0,
+        "fundingWeight" : 666,
+        "channelFeeMaxBaseMsat" : "100000msat",
+        "channelFeeMaxProportional" : 2,
+        "compactLease" : "029a000000200000000186a3"
+    },
+    {
+        "alias" : "VaselineLightning",
+        "color" : "291fe0",
+        "lastTimestamp" : "10-11-2021",
+        "leaseFeeBaseMsat" : "0msat",
+        "leaseFeeBasis" : 0,
+        "fundingWeight" : 666,
+        "channelFeeMaxBaseMsat" : "100000msat",
+        "channelFeeMaxProportional" : 2,
+        "compactLease" : "029a000000200000000186a2"
+    },
+    {
+        "alias" : "BlockParty",
+        "color" : "901603",
+        "lastTimestamp" : "10-11-2021",
+        "leaseFeeBaseMsat" : "0msat",
+        "leaseFeeBasis" : 0,
+        "fundingWeight" : 666,
+        "channelFeeMaxBaseMsat" : "100000msat",
+        "channelFeeMaxProportional" : 2,
+        "compactLease" : "029a000000200000000186a1"
+    }
+]
