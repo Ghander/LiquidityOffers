@@ -1,5 +1,5 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@material-ui/core';
-import { FC, ReactElement } from 'react';
+import { FC, ReactElement, useEffect, useState } from 'react';
 
 export interface Advert {
     alias: String
@@ -18,6 +18,8 @@ interface Props {
 }
 
 const ImgMediaCard: FC<Props> = (props): ReactElement =>  {
+  const [ textColor, setTextColor ] = useState('black');
+
     const { 
         alias,
         color,
@@ -31,21 +33,46 @@ const ImgMediaCard: FC<Props> = (props): ReactElement =>  {
     } = props.ad
     const bgColor = `#${color}`
 
+    const getContrastForTextColor = () => {
+      const r = parseInt(color.substr(0,2),16);
+      const g = parseInt(color.substr(2,2),16);
+      const b = parseInt(color.substr(4,2),16);
+      const yiq = ((r*299)+(g*587)+(b*114))/1000;
+      const tColor =  (yiq >= 128) ? 'black' : 'white';
+      setTextColor(tColor);
+    }
+
+    useEffect(() => {
+      getContrastForTextColor();
+    })
+  
+    const mediaStyles =  {
+          height: '100px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: bgColor,
+          color: textColor
+    }
+
   return (
     <Card id={compactLease} style={{ maxWidth: 300}} variant='outlined'>
-      <CardMedia
-        style={{height: '100px', backgroundColor: bgColor}}
-      /> 
+      <CardMedia className='card-media'
+        style={mediaStyles}
+        >
+          <Typography gutterBottom variant="h5" component="div">
+            <strong>{alias.toUpperCase()}</strong>
+          </Typography>
+        </CardMedia>
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {alias.toUpperCase()}
-        </Typography>
         <Typography variant="body2" color="primary">
           <strong>Last TimeStamp:</strong> {lastTimestamp}
           <br />
-          <strong>LeaSe Fee Base Msat:</strong> {leaseFeeBaseMsat}
+          <br />
+          <strong>Lease Fee Base Msat:</strong> {leaseFeeBaseMsat}
           <br />
           <strong>Lease Fee Basis:</strong> {leaseFeeBasis}
+          <br />
           <br />
           <strong>Funding Weight:</strong> {fundingWeight}
           <br />

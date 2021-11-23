@@ -36,7 +36,7 @@ function App() {
       <div style={{display:'flex', flexWrap: 'wrap'}}>
         {
           data && data.length > 0 &&
-          data.map((ad: Advert) => <div style={{margin:'5px 5px 5px 5px'}}><AdMediaCard key={ad.compactLease} ad={ad}></AdMediaCard></div>)
+          data.map((ad: Advert) => <div style={{margin:'5px 9px'}}><AdMediaCard key={ad.compactLease} ad={ad}></AdMediaCard></div>)
         }
       </div>
     </Container>
